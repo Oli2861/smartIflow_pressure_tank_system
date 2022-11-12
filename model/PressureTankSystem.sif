@@ -3,15 +3,15 @@ import motor_circuit.Fuse;
 import motor_circuit.Motor;
 import valve_system.*;
 
-class Pressure_Tank_System {
+class PressureTankSystem {
     Components:
         // Control circuit components
         PowerSource powerSource1;
         Switch switchS1;
         Relay relayK1;
         Relay relayK2;
-        Timer_Relay timerRelay;
-        Pressure_Switch pressureSwitchS;
+        TimerRelay timerRelay;
+        PressureSwitch pressureSwitchS;
 
         // Motor circuit components
         PowerSource powerSource2;
@@ -21,7 +21,7 @@ class Pressure_Tank_System {
         // Valve system components
         Reservoir reservoir;
         Pump pump;
-        Pressure_Tank tank;
+        PressureTank tank;
         OutletValve outletvalve;
 
 

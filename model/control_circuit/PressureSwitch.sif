@@ -2,7 +2,7 @@ package control_circuit;
 
 import definitions.*;
 
-class Pressure_Switch {
+class PressureSwitch {
     Ports:
         // Pressure sensor (reads tank pressure) input controlling whether the coil is energized.
         PressureInfo pressureInfo;

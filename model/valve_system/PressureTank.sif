@@ -2,7 +2,7 @@ package valve_system;
 
 import definitions.*;
 
-class Pressure_Tank {
+class PressureTank {
     Components:
 
     Ports:
