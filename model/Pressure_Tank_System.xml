@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<component>
+    <component name="powerSource1" position="-250.00,40.00,-160.00,200.00"/>
+    <component name="fuse" position="-20.00,290.00,70.00,360.00"/>
+    <component name="motor" position="100.00,420.00,190.00,490.00"/>
+    <component name="powerSource2" position="-160.00,380.00,-70.00,470.00"/>
+    <component name="timerRelay" position="290.00,170.00,380.00,240.00"/>
+    <component name="relayK2" position="140.00,280.00,230.00,350.00"/>
+    <component name="wireJoiner" position="80.00,130.00,170.00,200.00"/>
+    <component name="switchS1" position="-80.00,170.00,10.00,240.00"/>
+    <component name="relayK1" position="-90.00,50.00,0.00,120.00"/>
+    <component name="pressureSwitchS" position="510.00,110.00,600.00,180.00"/>
+    <component name="pump" position="300.00,370.00,390.00,440.00"/>
+    <component name="tank" position="680.00,150.00,770.00,390.00"/>
+    <connection end-port="relayK1.electrical1" start-port="powerSource1.plus" waypoints="-250.00,120.00,-90.00,67.50"/>
+    <connection end-port="wireJoiner.electrical1" start-port="relayK1.electrical2" waypoints="0.00,67.50,170.00,182.50"/>
+    <connection end-port="relayK1.controlInput1" start-port="wireJoiner.electrical3" waypoints="170.00,147.50,-90.00,102.50"/>
+    <connection end-port="relayK1.controlInput2" start-port="timerRelay.electrical2" waypoints="380.00,187.50,0.00,102.50"/>
+    <connection end-port="switchS1.electrical1" start-port="powerSource1.plus" waypoints="-250.00,120.00,-80.00,205.00"/>
+    <connection end-port="wireJoiner.electrical2" start-port="switchS1.electrical2" waypoints="10.00,205.00,80.00,165.00"/>
+    <connection end-port="relayK2.controlInput1" start-port="wireJoiner.electrical3" waypoints="170.00,147.50,140.00,332.50"/>
+    <connection end-port="relayK2.controlInput2" start-port="pressureSwitchS.electrical2" waypoints="600.00,127.50,230.00,332.50"/>
+    <connection end-port="relayK2.electrical1" start-port="fuse.electrical2" waypoints="70.00,325.00,140.00,297.50"/>
+    <connection end-port="motor.electrical1" start-port="relayK2.electrical2" waypoints="230.00,297.50,100.00,455.00"/>
+    <connection end-port="timerRelay.electrical1" start-port="wireJoiner.electrical3" waypoints="170.00,147.50,290.00,187.50"/>
+    <connection end-port="timerRelay.controlInput1" start-port="wireJoiner.electrical3" waypoints="170.00,147.50,290.00,222.50"/>
+    <connection end-port="timerRelay.controlInput2" start-port="pressureSwitchS.electrical2" waypoints="600.00,127.50,380.00,222.50"/>
+    <connection end-port="pressureSwitchS.pressureInput" start-port="tank.pressureOutputSensor" waypoints="770.00,330.00,600.00,162.50"/>
+    <connection end-port="fuse.electrical1" start-port="powerSource2.plus" waypoints="-160.00,425.00,-20.00,325.00"/>
+    <connection end-port="pump.mechanicalInput" start-port="motor.mechanicalOutput" waypoints="190.00,472.50,390.00,405.00"/>
+    <connection end-port="motor.electrical2" start-port="powerSource2.minus" waypoints="-70.00,425.00,190.00,437.50"/>
+    <connection end-port="tank.fluidInput" start-port="pump.fluidOutput" waypoints="300.00,405.00,680.00,270.00"/>
+</component>

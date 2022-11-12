@@ -1,0 +1,10 @@
+package motor_circuit;
+
+import definitions.*;
+// TODO
+class Fuse extends ElectricalComponent{
+    Transitions:
+        when(flow.om(powerConnection1, powerConnection1) >= 1)[failureMode == Nominal] {
+            failureMode = Defect;
+        }
+}

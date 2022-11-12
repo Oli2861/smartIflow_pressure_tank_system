@@ -1,0 +1,21 @@
+package valve_system;
+
+import definitions.*;
+
+class Reservoir {
+    Components:
+
+    Ports:
+        Fluid fluidOutput;
+
+    Variables:
+
+    Events:
+
+    Behavior:
+
+    Transitions:
+
+    EventHandlers:
+
+}

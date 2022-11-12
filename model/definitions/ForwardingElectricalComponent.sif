@@ -1,0 +1,12 @@
+package definitions;
+
+class ForwardingElectricalComponent extends ElectricalComponent{
+     Behavior:
+        if(failureMode == Nominal) {
+            connect{r=1}(powerConnection1, powerConnection2);
+        }
+        if(failureMode == Defect) {
+            connect{r=1}(powerConnection1, powerConnection2);
+        }
+
+}

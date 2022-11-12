@@ -1,0 +1,24 @@
+package definitions;
+
+class ElectricalComponent {
+    Ports:
+        Electrical powerConnection1;
+        Electrical powerConnection2;
+
+    Variables:
+        // Whether the component is damaged
+        Enum[Nominal, Defect] failureMode = Nominal;
+        // Whether the component is powered
+        Boolean isPowered = False;
+
+
+    Transitions:
+        // Component is not powered if no power is received & the component is not damaged
+        when(flow.om(powerConnection1, powerConnection2) == null) [failureMode == Nominal && isPowered == True] {
+            isPowered = False;
+        }
+        // Power component if power is received & the component is not damaged
+        when(flow.om(powerConnection1, powerConnection2) != null) [failureMode == Nominal && isPowered == False] {
+            isPowered = True;
+        }
+}

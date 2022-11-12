@@ -1,0 +1,23 @@
+package control_circuit;
+
+import definitions.*;
+
+class Pressure_Switch {
+    Components:
+
+    Ports:
+        // Pressure sensor (reads tank pressure) input controlling whether the coil is energized.
+        Pressure pressureInfo;
+        Electrical clientPowerConnection1;
+        Electrical clientPowerConnection2;
+
+    Variables:
+
+    Events:
+
+    Behavior:
+
+    Transitions:
+
+    EventHandlers:
+}

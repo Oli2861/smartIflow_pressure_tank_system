@@ -1,0 +1,80 @@
+import control_circuit.*;
+import motor_circuit.Fuse;
+import motor_circuit.Motor;
+import valve_system.*;
+
+class Pressure_Tank_System {
+    Components:
+        // Control circuit components
+        PowerSource powerSource1;
+        Switch switchS1;
+        Relay relayK1;
+        Relay relayK2;
+        Timer_Relay timerRelay;
+        Pressure_Switch pressureSwitchS;
+
+        // Motor circuit components
+        PowerSource powerSource2;
+        Fuse fuse;
+        Motor motor;
+
+        // Valve system components
+        Reservoir reservoir;
+        Pump pump;
+        Pressure_Tank tank;
+        OutletValve outletvalve;
+
+
+    Ports:
+
+    Variables:
+
+    Events:
+
+    Behavior:
+        // Switch S1
+        connect(powerSource1.plus, switchS1.powerConnection1);                        // Source --> Switch S1
+        connect(switchS1.powerConnection2, relayK1.powerConnection1);                 // Forward to Relay K1
+        connect(switchS1.powerConnection2, relayK2.powerConnection2);                 // Forward to Relay K2
+
+        // Relay K1
+        connect(powerSource1.plus, relayK1.clientPowerConnection1);                   // Source --> Relay K1 (client connection)
+        connect(timerRelay.clientPowerConnection1, relayK1.powerConnection2);         // Timer Relay --> Relay K1 (controlling connection)
+        connect(relayK1.clientPowerConnection2, relayK1.powerConnection1);            // Forward to self (controling connection)
+        connect(relayK1.clientPowerConnection2, relayK2.powerConnection1);            // Forward to Relay K2 (client connection)
+
+        // Relay K2
+        connect(relayK2.powerConnection2, timerRelay.powerConnection1);               // Forward power to Timer Relay
+        connect(fuse.powerConnection2, relayK2.clientPowerConnection1);               // Fuse --> Relay (client connection)
+        connect(relayK2.clientPowerConnection2, motor.powerConnection1);              // Forward to motor (client connection)
+
+        // Timer Relay
+        connect(timerRelay.powerConnection2, pressureSwitchS.clientPowerConnection1); // Timer Relay --> Pressure switch (is client connection)
+        connect(timerRelay.clientPowerConnection2, powerSource1.minus);               // Power Source --> Timer Relay (client connection)
+
+        // Pressure Switch
+        connect(powerSource1.minus, pressureSwitchS.clientPowerConnection2);          // Power Source --> Pressure Switch (client connection)
+        connect(tank.pressureInfo, pressureSwitchS.pressureInfo);                     // Pressure Tank --> Pressure Switch
+
+
+        // Fuse
+        connect(powerSource2.plus, fuse.powerConnection1);                            // Power Source 2 --> Fuse
+
+        // Motor
+        connect(motor.powerConnection2, powerSource2.minus);                          // Motor --> Power Source 2
+        connect(motor.mechanicalOutput, pump.mechanicalInput);                        // Motor --> Pump
+
+        // Reservoir
+        connect(reservoir.fluidOutput, pump.fluidInput);
+
+        // Pump
+        connect(pump.fluidOutput, tank.fluidInput);                                   // Pump --> Tank
+
+        // Tank
+        connect(tank.fluidOutput, outletvalve.fluidInput);                            // Tank --> Outlet
+
+    Transitions:
+
+    EventHandlers:
+
+}

@@ -1,0 +1,18 @@
+import definitions.*;
+
+class PowerSource extends BipolarEffortSource<Electrical> {
+    Components:
+
+    Ports:
+
+    Variables:
+
+    Events:
+
+    Behavior:
+
+    Transitions:
+
+    EventHandlers:
+
+}

@@ -1,0 +1,29 @@
+package control_circuit;
+
+import definitions.*;
+
+class Timer_Relay extends ForwardingElectricalComponent {
+    Components:
+
+    Ports:
+        Electrical clientPowerConnection1;
+        Electrical clientPowerConnection2;
+
+    Variables:
+        Boolean isPoweredForOneMinuteConstantly = False;
+        Boolean isClientConnected = False;
+
+    Events:
+
+    Behavior:
+
+
+
+    Transitions:
+       // when{delay = 4}(isPowered == True)[failureMode == Nominal]{
+        //    connect{r=1}(clientPowerConnection1, clientPowerConnection2);
+        //}
+
+    EventHandlers:
+
+}

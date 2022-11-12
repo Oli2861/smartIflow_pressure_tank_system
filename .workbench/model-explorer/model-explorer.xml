@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<model-explorer>
+  <sorted by="alphabet"/>
+  <filters>
+    <filter apply="true" type="variables"/>
+    <filter apply="true" type="ports"/>
+    <filter apply="true" type="connections"/>
+  </filters>
+</model-explorer>

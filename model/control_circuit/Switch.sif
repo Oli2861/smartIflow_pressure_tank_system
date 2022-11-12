@@ -1,0 +1,27 @@
+package control_circuit;
+import definitions.*;
+
+class Switch extends ElectricalComponent {
+    Variables:
+        // Whether the switch was pressed & is supposed to connect the wires.
+        Boolean isConnected = False;
+
+    Events:
+        PressButton{ type=userAction };
+
+    Behavior:
+        if(failureMode == Nominal && isConnected == True) {
+            connect{r=1}(powerConnection1, powerConnection2);
+        }
+        if(failureMode == Defect && isConnected == True) {
+            connect{r=1}(powerConnection1, powerConnection2);
+        }
+
+    EventHandlers:
+        // Manual connection of the switch. The user connects the switch in order to start the system.
+        when(PressButton) {
+            // Start system.
+            isConnected = True;
+        }
+
+}

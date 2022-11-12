@@ -1,0 +1,31 @@
+package valve_system;
+
+import definitions.*;
+
+class Pump {
+    Components:
+
+    Ports:
+        Mechanical mechanicalInput;
+        Fluid fluidInput;
+        Fluid fluidOutput;
+
+
+    Variables:
+        Boolean isPowered = False;
+
+    Events:
+
+    Behavior:
+        if(isPowered == True) {
+            set(fluidOutput, { running = True });
+        }
+
+    Transitions:
+        when(mechanicalInput.exists(powered = True)) {
+            isPowered = True;
+        }
+
+    EventHandlers:
+
+}

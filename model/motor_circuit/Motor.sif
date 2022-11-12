@@ -1,0 +1,24 @@
+package motor_circuit;
+
+import definitions.*;
+
+class Motor extends ForwardingElectricalComponent{
+    Components:
+
+    Ports:
+        Mechanical mechanicalOutput;
+
+    Variables:
+
+    Events:
+
+    Behavior:
+        if(isPowered == True) {
+            set(mechanicalOutput, {powered = True});
+        }
+
+    Transitions:
+
+    EventHandlers:
+
+}

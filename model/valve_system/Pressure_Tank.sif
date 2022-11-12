@@ -1,0 +1,36 @@
+package valve_system;
+
+import definitions.*;
+
+class Pressure_Tank {
+    Components:
+
+    Ports:
+        // Fluid received from pump.
+        Fluid fluidInput;
+        // Pressure output to the pressure switch.
+        Pressure pressureInfo;
+        // Outlet valve
+        Fluid fluidOutput;
+
+
+    Variables:
+        Boolean isHealthy = True;
+        Boolean isPressurized = True;
+
+    Events:
+
+    Behavior:
+        if(isPressurized == True) {
+            set(pressureInfo, { pressurized = True });
+        }
+
+    Transitions:
+        // As water is pumped into the pressure tank, the tank becomes pressurized.
+        when(fluidInput.exists(running = True)) {
+            isPressurized = True;
+        }
+
+    EventHandlers:
+
+}

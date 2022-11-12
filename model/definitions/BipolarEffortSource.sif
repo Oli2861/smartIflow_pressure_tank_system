@@ -1,0 +1,7 @@
+package definitions;
+
+class BipolarEffortSource<T> {flowComponent=bipolarEffortSource, om=2} {
+    Ports:
+        T{flowPort=source} plus;
+        T{flowPort=drain} minus;
+}

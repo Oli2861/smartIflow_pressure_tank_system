@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<component>
+    <port name="electrical2" order="0" side="RIGHT"/>
+    <port name="electrical1" order="0" side="LEFT"/>
+    <port name="pressureInput" order="1" side="RIGHT"/>
+</component>

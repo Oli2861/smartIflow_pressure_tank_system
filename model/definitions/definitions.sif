@@ -1,0 +1,25 @@
+package definitions;
+
+enum Boolean {
+    True, False
+}
+
+port Electrical {
+
+}
+
+port Pressure {
+    Properties:
+        pressurized = {True, False};
+}
+
+port Mechanical {
+    Properties:
+        powered = {True, False};
+}
+
+port Fluid {
+    Properties:
+        running = {True, False};
+}
+
