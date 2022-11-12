@@ -8,7 +8,7 @@ port Electrical {
 
 }
 
-port Pressure {
+port PressureInfo {
     Properties:
         pressurized = {True, False};
 }

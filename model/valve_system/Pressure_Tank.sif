@@ -9,7 +9,7 @@ class Pressure_Tank {
         // Fluid received from pump.
         Fluid fluidInput;
         // Pressure output to the pressure switch.
-        Pressure pressureInfo;
+        PressureInfo pressureInfo;
         // Outlet valve
         Fluid fluidOutput;
 
@@ -27,7 +27,7 @@ class Pressure_Tank {
 
     Transitions:
         // As water is pumped into the pressure tank, the tank becomes pressurized.
-        when(fluidInput.exists(running = True)) {
+        when { delay = 1 } (fluidInput.exists(running = True)) {
             isPressurized = True;
         }
 

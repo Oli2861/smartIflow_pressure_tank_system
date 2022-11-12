@@ -3,21 +3,32 @@ package control_circuit;
 import definitions.*;
 
 class Pressure_Switch {
-    Components:
-
     Ports:
         // Pressure sensor (reads tank pressure) input controlling whether the coil is energized.
-        Pressure pressureInfo;
+        PressureInfo pressureInfo;
         Electrical clientPowerConnection1;
         Electrical clientPowerConnection2;
 
     Variables:
-
-    Events:
+        // Initially not pressurized
+        Boolean isPressurized = False;
 
     Behavior:
+        // If tank pressured, cut circuit
+        if(isPressurized == True){
+            // TODO: disconnect circuit
+        }
+
+        if(isPressurized == False){
+            connect{r=1}(clientPowerConnection1, clientPowerConnection2);
+        }
 
     Transitions:
-
+        when(pressureInfo.exists(pressurized = True)){
+            isPressurized = True;
+        }
+        when(pressureInfo.exists(pressurized = False)){
+            isPressurized = False;
+        }
     EventHandlers:
 }
