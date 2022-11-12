@@ -1,0 +1,20 @@
+package control_circuit;
+
+import definitions.*;
+
+class TimerRelay extends ForwardingElectricalComponent {
+    Ports:
+        Electrical clientPowerConnection1;
+        Electrical clientPowerConnection2;
+
+    Variables:
+        // Client connections connected by default
+        Boolean isClientConnected = True;
+
+    Transitions:
+        // Disconnect client connections
+        when { delay = 2 } (flow.om(powerConnection1, powerConnection2) != null) [failureMode == Nominal && isPowered == False] {
+            isClientConnected = False;
+        }
+
+}
