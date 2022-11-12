@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <component>
     <port name="pressureOutputValve" order="0" side="RIGHT"/>
-    <port name="fluidInput" order="0" side="LEFT"/>
+    <port name="fluidInput" order="0" side="BOTTOM"/>
     <port name="pressureOutputSensor" order="1" side="RIGHT"/>
+    <port name="pressureInfo" order="0" side="LEFT"/>
+    <port name="fluidOutput" order="0" side="RIGHT"/>
 </component>

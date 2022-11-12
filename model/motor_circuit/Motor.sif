@@ -8,17 +8,9 @@ class Motor extends ForwardingElectricalComponent{
     Ports:
         Mechanical mechanicalOutput;
 
-    Variables:
-
-    Events:
-
     Behavior:
         if(isPowered == True) {
-            set(mechanicalOutput, {powered = True});
+            set(mechanicalOutput, { powered = True });
         }
-
-    Transitions:
-
-    EventHandlers:
 
 }

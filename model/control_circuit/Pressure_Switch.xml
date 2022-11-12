@@ -3,4 +3,7 @@
     <port name="electrical2" order="0" side="RIGHT"/>
     <port name="electrical1" order="0" side="LEFT"/>
     <port name="pressureInput" order="1" side="RIGHT"/>
+    <port name="pressureInfo" order="0" side="RIGHT"/>
+    <port name="clientPowerConnection2" order="0" side="TOP"/>
+    <port name="clientPowerConnection1" order="0" side="BOTTOM"/>
 </component>

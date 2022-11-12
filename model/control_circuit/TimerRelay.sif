@@ -9,12 +9,20 @@ class TimerRelay extends ForwardingElectricalComponent {
 
     Variables:
         // Client connections connected by default
-        Boolean isClientConnected = True;
+        Boolean isConnected = True;
+
+      Behavior:
+        if(failureMode == Nominal && isConnected == True) {
+            connect{r=1}(powerConnection1, powerConnection2);
+        }
+         if(failureMode == Nominal && isConnected == False) {
+            // TODO: disconnect
+        }
 
     Transitions:
         // Disconnect client connections
         when { delay = 2 } (flow.om(powerConnection1, powerConnection2) != null) [failureMode == Nominal && isPowered == False] {
-            isClientConnected = False;
+            isConnected = False;
         }
 
 }

@@ -2,4 +2,6 @@
 <component>
     <port name="electrical2" order="0" side="RIGHT"/>
     <port name="electrical1" order="0" side="LEFT"/>
+    <port name="powerConnection2" order="0" side="RIGHT"/>
+    <port name="powerConnection1" order="0" side="BOTTOM"/>
 </component>

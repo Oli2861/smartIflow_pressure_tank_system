@@ -15,21 +15,38 @@ class PressureTank {
 
 
     Variables:
-        Boolean isHealthy = True;
-        Boolean isPressurized = True;
+        Enum[Unpressured, Pressurized, Damaged] status = Unpressured;
+        Boolean isReceivingPressure = True;
 
     Events:
 
     Behavior:
-        if(isPressurized == True) {
+        // Update pressure sensor information
+        if(status == Pressurized) {
             set(pressureInfo, { pressurized = True });
+        }
+        if(status == Pressurized) {
+            set(pressureInfo, { pressurized = False });
         }
 
     Transitions:
-        // As water is pumped into the pressure tank, the tank becomes pressurized.
-        when { delay = 1 } (fluidInput.exists(running = True)) {
-            isPressurized = True;
+        // Update whether the tank is currently filled by the pump
+        when (fluidInput.exists(running = True)) {
+            isReceivingPressure = True;
         }
+        when (fluidInput.exists(running = False)) {
+            isReceivingPressure = False;
+        }
+
+        // As water is pumped into the pressure tank, the tank becomes pressurized.
+        when { delay = 1 } (fluidInput.exists(running = True)) [isReceivingPressure == True] {
+            status = Pressurized;
+        }
+        // If pressured still after 2 time steps --> Damaged
+        when { delay = 2 } (fluidInput.exists(running = True)) [isReceivingPressure == True] {
+            status = Damaged;
+        }
+
 
     EventHandlers:
 

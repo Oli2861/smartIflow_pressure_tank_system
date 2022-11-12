@@ -3,19 +3,6 @@ package valve_system;
 import definitions.*;
 
 class OutletValve {
-    Components:
-
     Ports:
         Fluid fluidInput;
-
-    Variables:
-
-    Events:
-
-    Behavior:
-
-    Transitions:
-
-    EventHandlers:
-
 }

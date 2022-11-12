@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <component>
-    <port name="mechanicalInput" order="0" side="RIGHT"/>
-    <port name="fluidOutput" order="0" side="LEFT"/>
+    <port name="mechanicalInput" order="0" side="TOP"/>
+    <port name="fluidOutput" order="0" side="RIGHT"/>
+    <port name="fluidInput" order="0" side="LEFT"/>
 </component>

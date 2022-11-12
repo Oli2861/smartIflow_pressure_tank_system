@@ -7,15 +7,4 @@ class Reservoir {
 
     Ports:
         Fluid fluidOutput;
-
-    Variables:
-
-    Events:
-
-    Behavior:
-
-    Transitions:
-
-    EventHandlers:
-
 }
