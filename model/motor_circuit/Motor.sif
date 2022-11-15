@@ -3,8 +3,6 @@ package motor_circuit;
 import definitions.*;
 
 class Motor extends ForwardingElectricalComponent{
-    Components:
-
     Ports:
         Mechanical mechanicalOutput;
 
@@ -12,5 +10,4 @@ class Motor extends ForwardingElectricalComponent{
         if(isPowered == True) {
             set(mechanicalOutput, { powered = True });
         }
-
 }

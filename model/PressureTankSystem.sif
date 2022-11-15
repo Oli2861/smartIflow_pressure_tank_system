@@ -24,13 +24,6 @@ class PressureTankSystem {
         PressureTank tank;
         OutletValve outletvalve;
 
-
-    Ports:
-
-    Variables:
-
-    Events:
-
     Behavior:
         // Switch S1
         connect{r=1}(powerSource1.plus, switchS1.powerConnection1);                        // Source --> Switch S1
@@ -72,9 +65,5 @@ class PressureTankSystem {
 
         // Tank
         connect(tank.fluidOutput, outletvalve.fluidInput);                            // Tank --> Outlet
-
-    Transitions:
-
-    EventHandlers:
 
 }

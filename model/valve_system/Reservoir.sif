@@ -3,8 +3,6 @@ package valve_system;
 import definitions.*;
 
 class Reservoir {
-    Components:
-
     Ports:
         Fluid fluidOutput;
 }

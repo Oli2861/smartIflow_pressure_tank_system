@@ -3,8 +3,6 @@ package control_circuit;
 import definitions.*;
 
 class Relay extends ForwardingElectricalComponent {
-    Components:
-
     Ports:
         // First Input controling the connection.
         Electrical clientPowerConnection1;
@@ -14,8 +12,6 @@ class Relay extends ForwardingElectricalComponent {
     Variables:
         Boolean isClientConnected = False;
 
-    Events:
-
     Behavior:
         if(isPowered == True && failureMode == Nominal) {
             connect{r=1}(clientPowerConnection1, clientPowerConnection2);
@@ -23,9 +19,5 @@ class Relay extends ForwardingElectricalComponent {
         if(isPowered == False && failureMode == Nominal) {
             // TODO: Power not forwarded.
         }
-
-    Transitions:
-
-    EventHandlers:
 
 }

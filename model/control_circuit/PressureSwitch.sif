@@ -30,5 +30,4 @@ class PressureSwitch {
         when(pressureInfo.exists(pressurized = False)){
             isPressurized = False;
         }
-    EventHandlers:
 }

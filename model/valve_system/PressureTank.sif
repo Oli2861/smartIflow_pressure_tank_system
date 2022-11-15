@@ -3,8 +3,6 @@ package valve_system;
 import definitions.*;
 
 class PressureTank {
-    Components:
-
     Ports:
         // Fluid received from pump.
         Fluid fluidInput;
@@ -17,8 +15,6 @@ class PressureTank {
     Variables:
         Enum[Unpressured, Pressurized, Damaged] status = Unpressured;
         Boolean isReceivingPressure = True;
-
-    Events:
 
     Behavior:
         // Update pressure sensor information
@@ -46,8 +42,5 @@ class PressureTank {
         when { delay = 2 } (fluidInput.exists(running = True)) [isReceivingPressure == True] {
             status = Damaged;
         }
-
-
-    EventHandlers:
 
 }

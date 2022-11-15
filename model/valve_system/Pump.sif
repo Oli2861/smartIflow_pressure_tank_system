@@ -3,8 +3,6 @@ package valve_system;
 import definitions.*;
 
 class Pump {
-    Components:
-
     Ports:
         Mechanical mechanicalInput;
         Fluid fluidInput;
@@ -13,8 +11,6 @@ class Pump {
 
     Variables:
         Boolean isPowered = False;
-
-    Events:
 
     Behavior:
         if(isPowered == True) {
@@ -25,7 +21,4 @@ class Pump {
         when(mechanicalInput.exists(powered = True)) {
             isPowered = True;
         }
-
-    EventHandlers:
-
 }
