@@ -14,26 +14,39 @@
   <directory expanded="false" relative-path=".git\logs\refs\remotes"/>
   <directory expanded="false" relative-path=".git\logs\refs\remotes\origin"/>
   <directory expanded="false" relative-path=".git\objects"/>
+  <directory expanded="false" relative-path=".git\objects\00"/>
+  <directory expanded="false" relative-path=".git\objects\03"/>
+  <directory expanded="false" relative-path=".git\objects\04"/>
   <directory expanded="false" relative-path=".git\objects\0d"/>
   <directory expanded="false" relative-path=".git\objects\18"/>
   <directory expanded="false" relative-path=".git\objects\21"/>
+  <directory expanded="false" relative-path=".git\objects\27"/>
   <directory expanded="false" relative-path=".git\objects\2b"/>
   <directory expanded="false" relative-path=".git\objects\31"/>
   <directory expanded="false" relative-path=".git\objects\32"/>
+  <directory expanded="false" relative-path=".git\objects\39"/>
+  <directory expanded="false" relative-path=".git\objects\3a"/>
+  <directory expanded="false" relative-path=".git\objects\3e"/>
   <directory expanded="false" relative-path=".git\objects\40"/>
+  <directory expanded="false" relative-path=".git\objects\44"/>
   <directory expanded="false" relative-path=".git\objects\4a"/>
   <directory expanded="false" relative-path=".git\objects\4b"/>
   <directory expanded="false" relative-path=".git\objects\52"/>
   <directory expanded="false" relative-path=".git\objects\54"/>
+  <directory expanded="false" relative-path=".git\objects\56"/>
   <directory expanded="false" relative-path=".git\objects\5e"/>
   <directory expanded="false" relative-path=".git\objects\64"/>
   <directory expanded="false" relative-path=".git\objects\6b"/>
   <directory expanded="false" relative-path=".git\objects\6d"/>
+  <directory expanded="false" relative-path=".git\objects\6e"/>
   <directory expanded="false" relative-path=".git\objects\71"/>
   <directory expanded="false" relative-path=".git\objects\75"/>
   <directory expanded="false" relative-path=".git\objects\79"/>
+  <directory expanded="false" relative-path=".git\objects\7b"/>
   <directory expanded="false" relative-path=".git\objects\82"/>
+  <directory expanded="false" relative-path=".git\objects\83"/>
   <directory expanded="false" relative-path=".git\objects\85"/>
+  <directory expanded="false" relative-path=".git\objects\8b"/>
   <directory expanded="false" relative-path=".git\objects\8d"/>
   <directory expanded="false" relative-path=".git\objects\8e"/>
   <directory expanded="false" relative-path=".git\objects\92"/>
@@ -47,6 +60,7 @@
   <directory expanded="false" relative-path=".git\objects\b0"/>
   <directory expanded="false" relative-path=".git\objects\b3"/>
   <directory expanded="false" relative-path=".git\objects\b6"/>
+  <directory expanded="false" relative-path=".git\objects\bb"/>
   <directory expanded="false" relative-path=".git\objects\bc"/>
   <directory expanded="false" relative-path=".git\objects\c1"/>
   <directory expanded="false" relative-path=".git\objects\c7"/>
@@ -58,9 +72,12 @@
   <directory expanded="false" relative-path=".git\objects\db"/>
   <directory expanded="false" relative-path=".git\objects\dc"/>
   <directory expanded="false" relative-path=".git\objects\e0"/>
+  <directory expanded="false" relative-path=".git\objects\e5"/>
   <directory expanded="false" relative-path=".git\objects\e9"/>
+  <directory expanded="false" relative-path=".git\objects\f3"/>
   <directory expanded="false" relative-path=".git\objects\f5"/>
   <directory expanded="false" relative-path=".git\objects\f8"/>
+  <directory expanded="false" relative-path=".git\objects\fa"/>
   <directory expanded="false" relative-path=".git\objects\fd"/>
   <directory expanded="false" relative-path=".git\objects\info"/>
   <directory expanded="false" relative-path=".git\objects\pack"/>

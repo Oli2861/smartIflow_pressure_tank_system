@@ -42,10 +42,10 @@
   <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\valve_system\Reservoir.sif" selected="false" top-paragraph="0">
     <caret position="0" selection-end-column="0" selection-end-line="1" selection-start-column="0" selection-start-line="1"/>
   </file>
-  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\PowerSource.sif" selected="true" top-paragraph="0">
+  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\PowerSource.sif" selected="false" top-paragraph="0">
     <caret position="82" selection-end-column="59" selection-end-line="3" selection-start-column="59" selection-start-line="3"/>
   </file>
-  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\PressureTankSystem.sif" selected="false" top-paragraph="0">
-    <caret position="0" selection-end-column="0" selection-end-line="0" selection-start-column="0" selection-start-line="0"/>
+  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\PressureTankSystem.sif" selected="true" top-paragraph="21">
+    <caret position="1563" selection-end-column="0" selection-end-line="38" selection-start-column="0" selection-start-line="38"/>
   </file>
 </editor>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<component>
+    <port name="powerConnection2" order="1" side="TOP"/>
+    <port name="powerConnection1" order="0" side="BOTTOM"/>
+    <port name="clientPowerConnection2" order="0" side="TOP"/>
+    <port name="clientPowerConnection1" order="0" side="LEFT"/>
+</component>
