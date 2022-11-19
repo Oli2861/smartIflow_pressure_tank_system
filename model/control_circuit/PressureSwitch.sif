@@ -6,21 +6,23 @@ class PressureSwitch {
     Ports:
         // Pressure sensor (reads tank pressure) input controlling whether the coil is energized.
         PressureInfo pressureInfo;
+        // Client connections to be connected.
         Electrical clientPowerConnection1;
         Electrical clientPowerConnection2;
 
     Variables:
+        // If the pressure switch is defect, it does not detect excess pressure.
+        Enum[Nominal, Defect] failureMode = Nominal;
         // Initially not pressurized
         Boolean isPressurized = False;
 
-    Behavior:
-        // If tank pressured, cut circuit
-        if(isPressurized == True){
-            // TODO: disconnect circuit
-        }
+    Events:
+        Defect { type = failure };
 
-        if(isPressurized == False){
-            connect{r=1}(clientPowerConnection1, clientPowerConnection2);
+    Behavior:
+        // Connected, if the tank is not pressurized and the component is not damaged.
+        if(isPressurized == False && failureMode == Nominal){
+            connect{ r = 1 }(clientPowerConnection1, clientPowerConnection2);
         }
 
     Transitions:
@@ -30,4 +32,9 @@ class PressureSwitch {
         when(pressureInfo.exists(pressurized = False)){
             isPressurized = False;
         }
+    EventHandlers:
+        when(Defect){
+            failureMode = Defect;
+        }
+
 }

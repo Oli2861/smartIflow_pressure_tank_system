@@ -1,51 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <editor>
-  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\control_circuit\TimerRelay.sif" selected="false" top-paragraph="0">
-    <caret position="794" selection-end-column="0" selection-end-line="29" selection-start-column="0" selection-start-line="29"/>
-  </file>
-  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\control_circuit\PressureSwitch.sif" selected="false" top-paragraph="0">
-    <caret position="0" selection-end-column="0" selection-end-line="1" selection-start-column="0" selection-start-line="1"/>
+  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\control_circuit\Switch.sif" selected="false" top-paragraph="0">
+    <caret position="418" selection-end-column="16" selection-end-line="17" selection-start-column="16" selection-start-line="17"/>
   </file>
   <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\control_circuit\Relay.sif" selected="false" top-paragraph="0">
-    <caret position="101" selection-end-column="0" selection-end-line="6" selection-start-column="0" selection-start-line="6"/>
-  </file>
-  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\control_circuit\Switch.sif" selected="false" top-paragraph="0">
-    <caret position="0" selection-end-column="0" selection-end-line="1" selection-start-column="0" selection-start-line="1"/>
-  </file>
-  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\definitions\BipolarEffortSource.sif" selected="false" top-paragraph="0">
-    <caret position="0" selection-end-column="0" selection-end-line="1" selection-start-column="0" selection-start-line="1"/>
+    <caret position="572" selection-end-column="31" selection-end-line="16" selection-start-column="31" selection-start-line="16"/>
   </file>
   <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\definitions\ElectricalComponent.sif" selected="false" top-paragraph="0">
-    <caret position="0" selection-end-column="0" selection-end-line="1" selection-start-column="0" selection-start-line="1"/>
+    <caret position="406" selection-end-column="0" selection-end-line="18" selection-start-column="0" selection-start-line="18"/>
   </file>
   <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\definitions\ForwardingElectricalComponent.sif" selected="false" top-paragraph="0">
-    <caret position="0" selection-end-column="0" selection-end-line="1" selection-start-column="0" selection-start-line="1"/>
+    <caret position="201" selection-end-column="0" selection-end-line="8" selection-start-column="0" selection-start-line="8"/>
   </file>
-  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\definitions\definitions.sif" selected="false" top-paragraph="0">
-    <caret position="0" selection-end-column="0" selection-end-line="1" selection-start-column="0" selection-start-line="1"/>
+  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\control_circuit\TimerRelay.sif" selected="false" top-paragraph="0">
+    <caret position="639" selection-end-column="16" selection-end-line="24" selection-start-column="16" selection-start-line="24"/>
+  </file>
+  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\motor_circuit\Motor.sif" selected="true" top-paragraph="0">
+    <caret position="0" selection-end-column="0" selection-end-line="0" selection-start-column="0" selection-start-line="0"/>
   </file>
   <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\motor_circuit\Fuse.sif" selected="false" top-paragraph="0">
-    <caret position="0" selection-end-column="0" selection-end-line="1" selection-start-column="0" selection-start-line="1"/>
-  </file>
-  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\motor_circuit\Motor.sif" selected="false" top-paragraph="0">
-    <caret position="0" selection-end-column="0" selection-end-line="1" selection-start-column="0" selection-start-line="1"/>
-  </file>
-  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\valve_system\OutletValve.sif" selected="false" top-paragraph="0">
-    <caret position="0" selection-end-column="0" selection-end-line="1" selection-start-column="0" selection-start-line="1"/>
-  </file>
-  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\valve_system\PressureTank.sif" selected="false" top-paragraph="0">
-    <caret position="66" selection-end-column="20" selection-end-line="5" selection-start-column="20" selection-start-line="5"/>
-  </file>
-  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\valve_system\Pump.sif" selected="false" top-paragraph="0">
-    <caret position="0" selection-end-column="0" selection-end-line="1" selection-start-column="0" selection-start-line="1"/>
-  </file>
-  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\valve_system\Reservoir.sif" selected="false" top-paragraph="0">
-    <caret position="0" selection-end-column="0" selection-end-line="1" selection-start-column="0" selection-start-line="1"/>
-  </file>
-  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\PowerSource.sif" selected="false" top-paragraph="0">
-    <caret position="82" selection-end-column="59" selection-end-line="3" selection-start-column="59" selection-start-line="3"/>
-  </file>
-  <file path="C:\Users\Oli\Documents\code\smartIflow\Pressure Tank System\model\PressureTankSystem.sif" selected="true" top-paragraph="21">
-    <caret position="1563" selection-end-column="0" selection-end-line="38" selection-start-column="0" selection-start-line="38"/>
+    <caret position="0" selection-end-column="0" selection-end-line="0" selection-start-column="0" selection-start-line="0"/>
   </file>
 </editor>

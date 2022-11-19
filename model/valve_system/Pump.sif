@@ -5,7 +5,6 @@ import definitions.*;
 class Pump {
     Ports:
         Mechanical mechanicalInput;
-        Fluid fluidInput;
         Fluid fluidOutput;
 
 

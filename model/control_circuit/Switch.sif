@@ -7,14 +7,18 @@ class Switch extends ElectricalComponent {
         Boolean isConnected = False;
 
     Events:
-        PressButton{ type=userAction };
+        PressButton{ type = userAction };
 
     Behavior:
-        if(failureMode == Nominal && isConnected == True) {
-            connect{r=1}(powerConnection1, powerConnection2);
+        if(isConnected == True) {
+            connect{ r = 1 }(powerConnection1, powerConnection2);
         }
-        if(failureMode == Defect && isConnected == True) {
-            connect{r=1}(powerConnection1, powerConnection2);
+
+    Transitions:
+        // Since the button is not continiously pressed,
+        // it the switch disconnects the connection after 1 OM of time.
+        when { delay = 1 } (isConnected == True) {
+            isConnected = False;
         }
 
     EventHandlers:

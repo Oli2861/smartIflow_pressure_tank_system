@@ -3,7 +3,7 @@ import motor_circuit.Fuse;
 import motor_circuit.Motor;
 import valve_system.*;
 
-class PressureTankSystem {
+class Pressure_Tank_System {
     Components:
         // Control circuit components
         PowerSource powerSource1;
@@ -19,10 +19,8 @@ class PressureTankSystem {
         Motor motor;
 
         // Valve system components
-        Reservoir reservoir;
         Pump pump;
         PressureTank tank;
-        OutletValve outletvalve;
 
     Behavior:
         // Switch S1
@@ -57,13 +55,7 @@ class PressureTankSystem {
         connect{r=1}(motor.powerConnection2, powerSource2.minus);                          // Motor --> Power Source 2
         connect(motor.mechanicalOutput, pump.mechanicalInput);                        // Motor --> Pump
 
-        // Reservoir
-        connect(reservoir.fluidOutput, pump.fluidInput);
-
         // Pump
         connect(pump.fluidOutput, tank.fluidInput);                                   // Pump --> Tank
-
-        // Tank
-        connect(tank.fluidOutput, outletvalve.fluidInput);                            // Tank --> Outlet
 
 }

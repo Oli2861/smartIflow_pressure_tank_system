@@ -5,7 +5,7 @@
     <port name="controlInput2" order="1" side="RIGHT"/>
     <port name="controlInput1" order="1" side="LEFT"/>
     <port name="powerConnection2" order="0" side="RIGHT"/>
-    <port name="powerConnection1" order="0" side="LEFT"/>
+    <port name="powerConnection1" order="0" side="BOTTOM"/>
     <port name="clientPowerConnection2" order="1" side="RIGHT"/>
-    <port name="clientPowerConnection1" order="1" side="LEFT"/>
+    <port name="clientPowerConnection1" order="0" side="LEFT"/>
 </component>

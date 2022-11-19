@@ -8,21 +8,29 @@ class TimerRelay extends ForwardingElectricalComponent {
         Electrical clientPowerConnection2;
 
     Variables:
+        // If the timer relay is damaged, it does not time out.
+        Enum[Nominal, Defect] failureMode = Nominal;
         // Client connections connected by default
         Boolean isConnected = True;
 
-      Behavior:
+    Events:
+        Defect { type = failure };
+
+    Behavior:
         if(failureMode == Nominal && isConnected == True) {
-            connect{r=1}(powerConnection1, powerConnection2);
-        }
-         if(failureMode == Nominal && isConnected == False) {
-            // TODO: disconnect
+            connect{ r = 1 }(clientPowerConnection1, clientPowerConnection2);
         }
 
     Transitions:
         // Disconnect client connections
-        when { delay = 2 } (flow.om(powerConnection1, powerConnection2) != null) [failureMode == Nominal && isPowered == False] {
+        when { delay = 2 } (flow.om(powerConnection1, powerConnection2) != null)
+            [failureMode == Nominal && isPowered == False] {
             isConnected = False;
+        }
+
+    EventHandlers:
+        when(Defect){
+            failureMode = Defect;
         }
 
 }

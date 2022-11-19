@@ -1,8 +1,0 @@
-package valve_system;
-
-import definitions.*;
-
-class Reservoir {
-    Ports:
-        Fluid fluidOutput;
-}
