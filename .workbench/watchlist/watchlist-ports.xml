@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<watchlist last-set="Default">
+<watchlist last-set="ports">
+  <set name="ports">
+    <entry path="relayK1.powerConnection1"/>
+    <entry path="relayK1.powerConnection2"/>
+    <entry path="relayK1.clientPowerConnection2"/>
+    <entry path="relayK1.clientPowerConnection1"/>
+    <entry path="timerRelay.clientPowerConnection1"/>
+    <entry path="timerRelay.clientPowerConnection2"/>
+    <entry path="timerRelay.powerConnection1"/>
+    <entry path="timerRelay.powerConnection2"/>
+  </set>
   <set name="Default"/>
 </watchlist>
