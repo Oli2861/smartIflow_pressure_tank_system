@@ -16,10 +16,10 @@ class PressureTank {
 
     Behavior:
         // Update pressure sensor information
-        if(status == Pressurized || status == Damaged) {
+        if(status != Unpressured) {
             set(pressureInfo, { pressurized = True });
         }
-        if(status == Pressurized) {
+        if(status == Unpressured) {
             set(pressureInfo, { pressurized = False });
         }
 
@@ -33,11 +33,11 @@ class PressureTank {
         }
 
         // As water is pumped into the pressure tank, the tank becomes pressurized.
-        when { delay = 1 } (fluidInput.exists(running = True)) [isReceivingPressure == True] {
+        when { delay = 2 } (fluidInput.exists(running = True)) {
             status = Pressurized;
         }
-        // If pressured still after 2 time steps --> Damaged
-        when { delay = 3 } (fluidInput.exists(running = True)) [isReceivingPressure == True] {
+        // If pressured still after 4 OM of time --> Damaged.
+        when { delay = 4 } (fluidInput.exists(running = True)) [isReceivingPressure == True] {
             status = Damaged;
         }
 

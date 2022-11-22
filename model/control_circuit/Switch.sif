@@ -17,7 +17,7 @@ class Switch extends ElectricalComponent {
     Transitions:
         // Since the button is not continiously pressed,
         // it the switch disconnects the connection after 1 OM of time.
-        when { delay = 1 } (isConnected == True) {
+        when { delay = 2 } (isConnected == True) {
             isConnected = False;
         }
 

@@ -4,27 +4,27 @@
     <component name="fuse" position="200.00,330.00,290.00,400.00"/>
     <component name="motor" position="600.00,470.00,690.00,540.00"/>
     <component name="powerSource2" position="200.00,450.00,290.00,540.00"/>
-    <component name="timerRelay" position="840.00,240.00,930.00,310.00"/>
-    <component name="relayK2" position="600.00,320.00,690.00,390.00"/>
+    <component name="timerRelay" position="790.00,240.00,930.00,310.00"/>
+    <component name="relayK2" position="570.00,320.00,690.00,390.00"/>
     <component name="switchS1" position="250.00,160.00,340.00,230.00"/>
     <component name="relayK1" position="440.00,30.00,530.00,100.00"/>
-    <component name="pressureSwitchS" position="870.00,110.00,970.00,180.00"/>
+    <component name="pressureSwitchS" position="830.00,110.00,980.00,180.00"/>
     <component name="pump" position="600.00,630.00,690.00,700.00"/>
     <component name="tank" position="1160.00,20.00,1250.00,620.00"/>
-    <connection end-port="switchS1.powerConnection1" start-port="powerSource1.plus" waypoints="55.00,200.00,55.56,265.11,295.56,260.67,295.00,230.00"/>
+    <connection end-port="switchS1.powerConnection1" start-port="powerSource1.plus" waypoints="55.00,40.00,55.56,265.11,295.56,260.67,295.00,230.00"/>
     <connection end-port="relayK1.powerConnection1" start-port="switchS1.powerConnection2" waypoints="340.00,195.00,485.00,100.00"/>
-    <connection end-port="relayK2.powerConnection2" start-port="switchS1.powerConnection2" waypoints="340.00,195.00,690.00,337.50"/>
-    <connection end-port="relayK1.clientPowerConnection1" start-port="powerSource1.plus" waypoints="55.00,200.00,55.56,265.11,165.56,265.11,165.56,70.67,440.00,65.00"/>
-    <connection end-port="relayK1.powerConnection2" start-port="timerRelay.clientPowerConnection1" waypoints="840.00,275.00,530.00,47.50"/>
+    <connection end-port="relayK2.powerConnection1" start-port="switchS1.powerConnection2" waypoints="340.00,195.00,630.00,390.00"/>
+    <connection end-port="relayK1.clientPowerConnection1" start-port="powerSource1.plus" waypoints="55.00,40.00,55.56,265.11,165.56,265.11,165.56,70.67,440.00,65.00"/>
+    <connection end-port="relayK1.powerConnection2" start-port="timerRelay.clientPowerConnection1" waypoints="790.00,275.00,530.00,47.50"/>
     <connection end-port="relayK1.powerConnection1" start-port="relayK1.clientPowerConnection2" waypoints="530.00,82.50,485.00,100.00"/>
-    <connection end-port="relayK2.powerConnection1" start-port="relayK1.clientPowerConnection2" waypoints="530.00,82.50,645.00,390.00"/>
-    <connection end-port="timerRelay.powerConnection1" start-port="relayK2.powerConnection2" waypoints="690.00,337.50,885.56,335.78,885.00,310.00"/>
-    <connection end-port="relayK2.clientPowerConnection1" start-port="fuse.powerConnection2" waypoints="290.00,365.00,600.00,355.00"/>
+    <connection end-port="relayK2.powerConnection1" start-port="relayK1.clientPowerConnection2" waypoints="530.00,82.50,630.00,390.00"/>
+    <connection end-port="timerRelay.powerConnection1" start-port="relayK2.powerConnection2" waypoints="690.00,337.50,885.56,335.78,860.00,310.00"/>
+    <connection end-port="relayK2.clientPowerConnection1" start-port="fuse.powerConnection2" waypoints="290.00,365.00,570.00,355.00"/>
     <connection end-port="motor.powerConnection1" start-port="relayK2.clientPowerConnection2" waypoints="690.00,372.50,645.00,470.00"/>
-    <connection end-port="pressureSwitchS.clientPowerConnection1" start-port="timerRelay.powerConnection2" waypoints="907.50,240.00,920.00,180.00"/>
-    <connection end-port="powerSource1.minus" start-port="timerRelay.clientPowerConnection2" waypoints="862.50,240.00,815.56,-10.89,55.56,-16.00,55.00,40.00"/>
-    <connection end-port="pressureSwitchS.clientPowerConnection2" start-port="powerSource1.minus" waypoints="55.00,40.00,55.56,-15.56,930.11,-10.44,920.00,110.00"/>
-    <connection end-port="pressureSwitchS.pressureInfo" start-port="tank.pressureInfo" waypoints="1160.00,320.00,970.00,145.00"/>
+    <connection end-port="pressureSwitchS.clientPowerConnection1" start-port="timerRelay.powerConnection2" waypoints="895.00,240.00,905.00,180.00"/>
+    <connection end-port="powerSource1.minus" start-port="timerRelay.clientPowerConnection2" waypoints="825.00,240.00,815.56,-10.89,55.56,-16.00,100.00,120.00"/>
+    <connection end-port="pressureSwitchS.clientPowerConnection2" start-port="powerSource1.minus" waypoints="100.00,120.00,55.56,-15.56,930.11,-10.44,905.00,110.00"/>
+    <connection end-port="pressureSwitchS.pressureInfo" start-port="tank.pressureInfo" waypoints="1160.00,320.00,980.00,145.00"/>
     <connection end-port="fuse.powerConnection1" start-port="powerSource2.plus" waypoints="245.00,450.00,245.00,400.00"/>
     <connection end-port="powerSource2.minus" start-port="motor.powerConnection2" waypoints="600.00,505.00,290.00,495.00"/>
     <connection end-port="pump.mechanicalInput" start-port="motor.mechanicalOutput" waypoints="645.00,540.00,645.00,630.00"/>

@@ -6,12 +6,15 @@ class ElectricalComponent {
         Electrical powerConnection2;
 
     Variables:
-        // Whether the component is powered
+        // Whether the component is powered.
         Boolean isPowered = False;
 
     Transitions:
-        // Power component if power is received
+        // Update state variable, if power is received.
         when (flow.om(powerConnection1, powerConnection2) != null){
             isPowered = True;
+        }
+        when (flow.om(powerConnection1, powerConnection2) == null){
+            isPowered = False;
         }
 }

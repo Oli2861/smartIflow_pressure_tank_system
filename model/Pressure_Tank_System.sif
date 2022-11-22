@@ -26,7 +26,7 @@ class Pressure_Tank_System {
         // Switch S1
         connect{r=1}(powerSource1.plus, switchS1.powerConnection1);                        // Source --> Switch S1
         connect{r=1}(switchS1.powerConnection2, relayK1.powerConnection1);                 // Forward to Relay K1
-        connect{r=1}(switchS1.powerConnection2, relayK2.powerConnection2);                 // Forward to Relay K2
+        connect{r=1}(switchS1.powerConnection2, relayK2.powerConnection1);                 // Forward to Relay K2
 
         // Relay K1
         connect{r=1}(powerSource1.plus, relayK1.clientPowerConnection1);                   // Source --> Relay K1 (client connection)
@@ -53,9 +53,9 @@ class Pressure_Tank_System {
 
         // Motor
         connect{r=1}(motor.powerConnection2, powerSource2.minus);                          // Motor --> Power Source 2
-        connect(motor.mechanicalOutput, pump.mechanicalInput);                        // Motor --> Pump
+        connect(motor.mechanicalOutput, pump.mechanicalInput);                             // Motor --> Pump
 
         // Pump
-        connect(pump.fluidOutput, tank.fluidInput);                                   // Pump --> Tank
+        connect(pump.fluidOutput, tank.fluidInput);                                        // Pump --> Tank
 
 }

@@ -7,7 +7,11 @@ class Motor extends ForwardingElectricalComponent{
         Mechanical mechanicalOutput;
 
     Behavior:
+        // The motor produces mechanical power if it is powered.
         if(isPowered == True) {
             set(mechanicalOutput, { powered = True });
+        }
+        if(isPowered == False) {
+            set(mechanicalOutput, { powered = False });
         }
 }

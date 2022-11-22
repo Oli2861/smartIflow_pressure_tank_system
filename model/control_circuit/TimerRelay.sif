@@ -22,14 +22,13 @@ class TimerRelay extends ForwardingElectricalComponent {
         }
 
     Transitions:
-        // Disconnect client connections
-        when { delay = 2 } (flow.om(powerConnection1, powerConnection2) != null)
-            [failureMode == Nominal && isPowered == False] {
+        // Disconnect client connections.
+        when { delay = 3 } (isPowered == True && failureMode == Nominal) [isPowered == True]{
             isConnected = False;
         }
 
     EventHandlers:
-        when(Defect){
+        when(Defect) {
             failureMode = Defect;
         }
 

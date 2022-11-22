@@ -15,9 +15,15 @@ class Pump {
         if(isPowered == True) {
             set(fluidOutput, { running = True });
         }
+        if(isPowered == False) {
+            set(fluidOutput, { running = False });
+        }
 
     Transitions:
         when(mechanicalInput.exists(powered = True)) {
             isPowered = True;
+        }
+        when(mechanicalInput.exists(powered = False)) {
+           isPowered = False;
         }
 }
