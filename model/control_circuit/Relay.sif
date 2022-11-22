@@ -14,14 +14,26 @@ class Relay extends ForwardingElectricalComponent {
         // relay does not open it's contacts even though it is supposed to do so.
         // Causes of such scenarios are jams or corroded contacts.
         Enum[Nominal, Jammed] failureMode = Nominal;
+        // Indicates whether the contacts of the relay are connected (power is forwarded).
+        Boolean isConnected = False;
 
     Events:
         ContactsJammed { type = failure };
 
     Behavior:
-        // Connect client connection if the
-        if(isPowered == True || failureMode == Jammed) {
+        // Connect client connection if the relay is powered.
+        if(isConnected == True) {
             connect { r = 1 } (clientPowerConnection1, clientPowerConnection2);
+        }
+
+    Transitions:
+        when(isPowered == True) {
+            isConnected = True;
+        }
+        // The connection is only cut, if the relay does not longer receive power and
+        // the failure mode is nominal i.e. contacts are not jammed.
+        when(isPowered == False && failureMode == Nominal) {
+            isConnected = False;
         }
 
     EventHandlers:
