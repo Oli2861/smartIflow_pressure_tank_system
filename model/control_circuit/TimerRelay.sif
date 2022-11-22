@@ -17,13 +17,13 @@ class TimerRelay extends ForwardingElectricalComponent {
         Defect { type = failure };
 
     Behavior:
-        if(failureMode == Nominal && isConnected == True) {
+        if(isConnected == True) {
             connect{ r = 1 }(clientPowerConnection1, clientPowerConnection2);
         }
 
     Transitions:
         // Disconnect client connections.
-        when { delay = 3 } (isPowered == True && failureMode == Nominal) [isPowered == True]{
+        when { delay = 3 } (isPowered == True && failureMode == Nominal) [isPowered == True  && failureMode == Nominal]{
             isConnected = False;
         }
 

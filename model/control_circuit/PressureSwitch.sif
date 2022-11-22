@@ -20,13 +20,13 @@ class PressureSwitch {
         Defect { type = failure };
 
     Behavior:
-        // Connected, if the tank is not pressurized and the component is not damaged.
-        if(isPressurized == False && failureMode == Nominal) {
+        // Connected, if the tank is not pressurized.
+        if(isPressurized == False) {
             connect { r = 1 } (clientPowerConnection1, clientPowerConnection2);
         }
 
     Transitions:
-        when(pressureInfo.exists(pressurized = True)) {
+        when(pressureInfo.exists(pressurized = True) && failureMode == Nominal) {
             isPressurized = True;
         }
         when(pressureInfo.exists(pressurized = False)) {

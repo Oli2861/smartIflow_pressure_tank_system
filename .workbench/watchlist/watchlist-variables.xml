@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <watchlist last-set="vars">
   <set name="vars">
-    <entry path="switchS1.isConnected"/>
-    <entry path="relayK1.failureMode"/>
-    <entry path="relayK1.isPowered"/>
     <entry path="relayK1.isClientConnected"/>
-    <entry path="timerRelay.isPowered"/>
-    <entry path="timerRelay.isConnected"/>
-    <entry path="timerRelay.failureMode"/>
-    <entry path="pressureSwitchS.isPressurized"/>
-    <entry path="relayK2.failureMode"/>
-    <entry path="relayK2.isPowered"/>
     <entry path="relayK2.isClientConnected"/>
-    <entry path="tank.status"/>
+    <entry path="switchS1.isConnected"/>
+    <entry path="switchS1.isPowered"/>
+    <entry path="relayK1.failureMode"/>
+    <entry path="relayK1.isConnected"/>
+    <entry path="relayK2.isPowered"/>
+    <entry path="relayK1.isPowered"/>
+    <entry path="relayK2.failureMode"/>
+    <entry path="relayK2.isConnected"/>
     <entry path="motor.isPowered"/>
     <entry path="pump.isPowered"/>
+    <entry path="tank.isReceivingPressure"/>
+    <entry path="tank.status"/>
+    <entry path="pressureSwitchS.failureMode"/>
+    <entry path="pressureSwitchS.isPressurized"/>
+    <entry path="timerRelay.failureMode"/>
+    <entry path="timerRelay.isConnected"/>
+    <entry path="timerRelay.isPowered"/>
   </set>
   <set name="Default"/>
 </watchlist>

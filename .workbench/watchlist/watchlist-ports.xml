@@ -4,11 +4,14 @@
     <entry path="relayK1.powerConnection1"/>
     <entry path="relayK1.powerConnection2"/>
     <entry path="relayK1.clientPowerConnection2"/>
-    <entry path="relayK1.clientPowerConnection1"/>
     <entry path="timerRelay.clientPowerConnection1"/>
     <entry path="timerRelay.clientPowerConnection2"/>
     <entry path="timerRelay.powerConnection1"/>
     <entry path="timerRelay.powerConnection2"/>
+    <entry path="relayK2.powerConnection1"/>
+    <entry path="relayK2.powerConnection2"/>
+    <entry path="switchS1.powerConnection1"/>
+    <entry path="switchS1.powerConnection2"/>
   </set>
   <set name="Default"/>
 </watchlist>
