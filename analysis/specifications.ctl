@@ -4,5 +4,5 @@
 //AG(path.to.component.variable == value
 //    -> path.to.another.component.variable == value2);
 
-TankNotDamaged := AG((pump.isPowered == True -> tank.status != Damaged));
-
+tankNotDamagedAfterPumpStarted := AG((pump.isPowered == True -> tank.status != Damaged));
+tankNotDamaged := AG(tank.status != Damaged);
