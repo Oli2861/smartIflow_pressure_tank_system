@@ -4,28 +4,34 @@ import definitions.*;
 class Switch extends ElectricalComponent {
     Variables:
         // Whether the switch was pressed & is supposed to connect the wires.
-        Boolean isConnected = False;
+        Boolean isActuated = False;
+        Enum[Nominal, Damaged] failureMode = Nominal;
 
     Events:
-        PressButton{ type = userAction };
+        PressButton { type = userAction };
+        SwitchDefect { type = failure };
 
     Behavior:
-        if(isConnected == True) {
+        if(isActuated == True) {
             connect{ r = 1 }(powerConnection1, powerConnection2);
         }
 
     Transitions:
         // Since the button is not continiously pressed,
         // it the switch disconnects the connection after 1 OM of time.
-        when { delay = 2 } (isConnected == True) {
-            isConnected = False;
+        when { delay = 2 } (isActuated == True && failureMode == Nominal) {
+            isActuated = False;
         }
 
     EventHandlers:
         // Manual connection of the switch. The user connects the switch in order to start the system.
         when(PressButton) {
             // Start system.
-            isConnected = True;
+            isActuated = True;
+        }
+
+        when(SwitchDefect) {
+            failureMode = Damaged;
         }
 
 }

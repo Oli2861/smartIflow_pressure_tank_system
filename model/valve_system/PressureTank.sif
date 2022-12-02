@@ -33,11 +33,13 @@ class PressureTank {
         }
 
         // As water is pumped into the pressure tank, the tank becomes pressurized.
-        when { delay = 2 } (fluidInput.exists(running = True)) {
+        when { delay = 2 } (fluidInput.exists(running = True))
+        [fluidInput.exists(running = True)] {
             status = Pressurized;
         }
         // If pressured still after 4 OM of time --> Damaged.
-        when { delay = 4 } (fluidInput.exists(running = True)) {
+        when { delay = 4 } (fluidInput.exists(running = True))
+        [fluidInput.exists(running = True)] {
             status = Damaged;
         }
 
