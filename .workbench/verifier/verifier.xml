@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <verifier>
-  <event-trigger-specification name="AllEvents"/>
-  <ctl-formula name="TankNotDamaged"/>
-  <minimal-cutset-generator name="State Based"/>
+  <event-trigger-specification name="MaxThreeFaults"/>
+  <ctl-formula name="TankNotDamagedAfterPumpStarted"/>
+  <minimal-cutset-generator name="Event Based"/>
 </verifier>

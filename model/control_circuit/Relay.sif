@@ -18,7 +18,7 @@ class Relay extends ForwardingElectricalComponent {
         Boolean isConnected = False;
 
     Events:
-        ContactsJammed { type = failure };
+        Defect { type = failure };
 
     Behavior:
         // Connect client connection if the relay is powered.
@@ -37,7 +37,7 @@ class Relay extends ForwardingElectricalComponent {
         }
 
     EventHandlers:
-        when(ContactsJammed) {
+        when(Defect) {
             failureMode = Jammed;
         }
 

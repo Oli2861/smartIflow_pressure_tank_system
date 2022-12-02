@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <fmea-table>
   <fmea-layout layout-id="-1"/>
-  <fmea-event-trigger-specification name=""/>
+  <fmea-event-trigger-specification name="MaxThreeFaults"/>
   <fmea-observed-variables active="false"/>
 </fmea-table>
