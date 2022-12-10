@@ -9,7 +9,7 @@ class Switch extends ElectricalComponent {
 
     Events:
         PressButton { type = userAction };
-        SwitchDefect { type = failure };
+        SwitchDefect { type = failure, p = 0.1e-7 };
 
     Behavior:
         if(isActuated == True) {
