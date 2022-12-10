@@ -1,0 +1,29 @@
+---
+version: '0.1'
+effect_finders:
+  ctl_based:
+    formulae:
+      - name: TankNotDamagedAfterPumpStarted
+        translation: Tank not damaged after pump started
+        severity: 1
+        detection: 1
+
+      - name: TankNotDamaged
+        translation: Tank not damaged
+        severity: 1
+        detection: 2
+
+levels:
+    probability:
+        - number: 1
+          upper-limit: 1e-8
+        - number: 2
+          lower-limit: 1e-8
+          upper-limit: 1e-7
+
+detection-levels:
+    - detection-number: 1
+      lower-limit: 99.8
+    - detection-number: 2
+      upper-limit: 99.8
+      lower-limit: 99.7
