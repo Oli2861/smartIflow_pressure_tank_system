@@ -4,12 +4,12 @@ effect_finders:
   ctl_based:
     formulae:
       - name: TankNotDamagedAfterPumpStarted
-        translation: Tank not damaged after pump started
+        translation: Tank damaged after the pump started
         severity: 1
         detection: 1
 
       - name: TankNotDamaged
-        translation: Tank not damaged
+        translation: Tank damaged
         severity: 1
         detection: 2
 
@@ -27,3 +27,41 @@ detection-levels:
     - detection-number: 2
       upper-limit: 99.8
       lower-limit: 99.7
+
+effects:
+  - description: Disconnected
+      states:
+          control_circuit.Relay.isConnected:
+              value: False
+          control_circuit.TimerRelay.isConnected:
+              value: False
+    - description: Tank is damaged
+        states:
+            valve_system.PressureTank.status:
+                value: Damaged
+    - description: Tank receives pressure
+        states:
+            valve_system.PressureTank.isReceivingPressure
+                value: True
+    - description: Receives power
+        states:
+            control_circuit.Relay.isPowered:
+                value: True
+            control_circuit.Switch.isPowered:
+                value: True
+            motor_circuit.Motor.isPowered:
+                value: True
+            motor_circuit.Fuse.isPowered:
+                value: True
+            valve_system.Pump.isPowered:
+                value: True
+    - description: Is defect
+        states:
+            control_circuit.TimerRelay.failureMode:
+                value: Defect
+            control_circuit.PressureSwitch.failureMode:
+                value: Defect
+            control_circuit.Switch.failureMode:
+                value: Damaged
+            control_cicuit.Relay.failureMode:
+                value: Jammed
