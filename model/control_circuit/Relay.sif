@@ -10,10 +10,10 @@ class Relay extends ForwardingElectricalComponent {
         Electrical clientPowerConnection2;
 
     Variables:
-        // The failure mode jammed represents comonent failures in which the
+        // The failure mode defect represents component failures in which the
         // relay does not open it's contacts even though it is supposed to do so.
         // Causes of such scenarios are jams or corroded contacts.
-        Enum[Nominal, Jammed] failureMode = Nominal;
+        Enum[Nominal, Defect] failureMode { type = failureMode } = Nominal;
         // Indicates whether the contacts of the relay are connected (power is forwarded).
         Boolean isConnected = False;
 
@@ -38,7 +38,7 @@ class Relay extends ForwardingElectricalComponent {
 
     EventHandlers:
         when(Defect) {
-            failureMode = Jammed;
+            failureMode = Defect;
         }
 
 }

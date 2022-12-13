@@ -9,7 +9,7 @@ class TimerRelay extends ForwardingElectricalComponent {
 
     Variables:
         // If the timer relay is damaged, it does not time out.
-        Enum[Nominal, Defect] failureMode = Nominal;
+        Enum[Nominal, Defect] failureMode { type = failureMode } = Nominal;
         // Client connections connected by default
         Boolean isConnected = True;
 

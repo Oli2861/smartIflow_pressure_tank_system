@@ -12,7 +12,7 @@ class PressureSwitch {
 
     Variables:
         // If the pressure switch is defect, it does not detect excess pressure.
-        Enum[Nominal, Defect] failureMode = Nominal;
+        Enum[Nominal, Defect] failureMode { type = failureMode } = Nominal;
         // Initially not pressurized
         Boolean isPressurized = False;
 
