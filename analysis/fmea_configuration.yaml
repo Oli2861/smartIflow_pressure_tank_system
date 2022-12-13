@@ -13,6 +13,125 @@ effect_finders:
         severity: 10
         detection: 2
 
+  state_based:
+    components:
+      - component_class: control_circuit.PressureSwitch
+        state_patterns:
+          - translation: Pressure switch detects pressure
+            states:
+              - state: isPressurized
+                is: [True]
+          - translation: Pressure switch detects no pressure
+            states:
+              - state: isPressurized
+                is: [False]
+      - component_class: control_circuit.Relay
+        state_patterns:
+          - translation: Relay is powered
+            states:
+                - state: isPowered
+                  is: [True]
+          - translation: Relay is not powered
+            states:
+                - state: isPowered
+                  is: [False]
+          - translation: Relay contacts closed
+            states:
+                - state: isConnected
+                  is: [True]
+          - translation: Relay contacts open
+            states:
+                - state: isConnected
+                  is: [False]
+      - component_class: control_circuit.Switch
+        state_patterns:
+          - translation: Switch is powered
+            states:
+              - state: isPowered
+                is: [True]
+          - translation: Switch is not powered
+            states:
+              - state: isPowered
+                is: [False]
+          - translation: Switch is actuated
+            states:
+              - state: isActuated
+                is: [True]
+          - translation: Switch is not actuated
+            states:
+              - state: isActuated
+                is: [False]
+      - component_class: control_circuit.TimerRelay
+        state_patterns:
+          - translation: Timer relay is powered
+            states:
+              - state: isPowered
+                is: [True]
+          - translation: Timer relay is not powered
+            states:
+              - state: isPowered
+                is: [False]
+          - translation: Timer relay contacts open
+            states:
+                - state: isConnected
+                  is: [False]
+          - translation: Timer relay contacts closed
+            states:
+                - state: isConnected
+                  is: [True]
+      - component_class: motor_circuit.Fuse
+        state_patterns:
+          - translation: Fuse is powered
+            states:
+              - state: isPowered
+                is: [True]
+          - translation: Fuse is not powered
+            states:
+              - state: isPowered
+                is: [False]
+      - component_class: motor_circuit.Motor
+        state_patterns:
+          - translation: Fuse is powered
+            states:
+              - state: isPowered
+                is: [True]
+          - translation: Fuse is not powered
+            states:
+              - state: isPowered
+                is: [False]
+      - component_class: valve_system.Pump
+        state_patterns:
+          - translation: Pump receives mechanical power
+            states:
+              - state: isPowered
+                is: [True]
+          - translation: Pump receives no mechanical power
+            states:
+              - state: isPowered
+                is: [False]
+      - component_class: valve_system.PressureTank
+        state_patterns:
+          - translation: Pressure tank receives pressure
+            states:
+              - state: isReceivingPressure
+                is: [True]
+          - translation: Pressure tank receives no pressure
+            states:
+              - state: isReceivingPressure
+                is: [False]
+          - translation: Pressure tank is not pressured
+            states:
+              - state: status
+                is: [Unpressured]
+          - translation: Pressure tank is pressured
+            states:
+              - state: status
+                is: [Pressurized]
+          - translation: Pressure tank is damaged
+            states:
+              - state: status
+                is: [Damaged]
+
 levels:
     probability:
         - number: 1
