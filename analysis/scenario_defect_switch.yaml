@@ -1,0 +1,9 @@
+---
+name: Defect Pressure Switch
+description: |
+  Pressure Switch is defect.
+components:
+  - component: pressureSwitchS
+    variables:
+      - name: failureMode
+        value: Defect

@@ -15,8 +15,8 @@ class PressureTank {
         Boolean isReceivingPressure = False;
 
     Events:
-        SecondaryFailure { type = failure, p = 0.1e-8 };
-        TankRupture { type = failure, p = 0.1e-8 };
+        SecondaryFailure { type = failure, p = 1e-5 };
+        TankRupture { type = failure, p = 1e-5 };
 
     Behavior:
         // Update pressure sensor information

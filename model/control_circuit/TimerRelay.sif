@@ -14,7 +14,7 @@ class TimerRelay extends ForwardingElectricalComponent {
         Boolean isConnected = True;
 
     Events:
-        Defect { type = failure, p = 0.1e-6};
+        Defect { type = failure, p = 1e-7};
 
     Behavior:
         if(isConnected == True) {

@@ -8,3 +8,4 @@ MaxEightFaults := path.filter(type=failure).count() <= 8;
 MaxSixFaults := path.filter(type=failure).count() <= 6;
 MaxFourFaults := path.filter(type=failure).count() <= 4;
 MaxTwoFaults := path.filter(type=failure).count() <= 2;
+MaxOneFaults := path.filter(type=failure).count() <= 1;
