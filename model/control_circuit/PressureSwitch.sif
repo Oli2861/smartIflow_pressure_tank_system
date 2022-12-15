@@ -17,7 +17,7 @@ class PressureSwitch {
         Boolean isPressurized = False;
 
     Events:
-        Defect { type = failure, p = 1e-10};
+        Defect { type = failure, p = 1e-10, detection = 3 };
 
     Behavior:
         // Connected, if the tank is not pressurized.
