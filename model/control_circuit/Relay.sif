@@ -18,7 +18,7 @@ class Relay extends ForwardingElectricalComponent {
         Boolean isConnected = False;
 
     Events:
-        Defect { type = failure, p = 1e-6, detection = 4 };
+        Defect { type = failure, p = 3e-5, detection = 4 };
 
     Behavior:
         // Connect client connection if the relay is powered.
