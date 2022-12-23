@@ -9,6 +9,7 @@ class Switch extends ElectricalComponent {
 
     Events:
         PressButton { type = userAction };
+        ReleaseButton { type = userAction};
         SwitchDefect { type = failure, p = 3e-5, detection = 5 };
 
     Behavior:
@@ -25,9 +26,13 @@ class Switch extends ElectricalComponent {
 
     EventHandlers:
         // Manual connection of the switch. The user connects the switch in order to start the system.
-        when(PressButton) {
+        when (PressButton) [isActuated == False]{
             // Start system.
             isActuated = True;
+        }
+
+        when { stable=1 } (ReleaseButton) [isActuated == True] {
+            isActuated = False;
         }
 
         when(SwitchDefect) {

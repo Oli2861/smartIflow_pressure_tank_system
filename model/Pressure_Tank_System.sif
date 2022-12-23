@@ -31,8 +31,8 @@ class Pressure_Tank_System {
         // Relay K1
         connect{r=1}(powerSource1.plus, relayK1.clientPowerConnection1);                   // Source --> Relay K1 (client connection)
         connect{r=1}(timerRelay.clientPowerConnection1, relayK1.powerConnection2);         // Timer Relay --> Relay K1 (controlling connection)
-        connect{r=1}(relayK1.clientPowerConnection2, relayK1.powerConnection1);            // Forward to self (controling connection)
-        connect{r=1}(relayK1.clientPowerConnection2, relayK2.powerConnection1);            // Forward to Relay K2 (client connection)
+        //connect{r=1}(relayK1.clientPowerConnection2, relayK1.powerConnection1);            // Forward to self (controling connection)
+        connect{r=1}(relayK1.clientPowerConnection2, switchS1.powerConnection2);            // Forward to Relay K2 (client connection)
 
         // Relay K2
         connect{r=1}(relayK2.powerConnection2, timerRelay.powerConnection1);               // Forward power to Timer Relay
